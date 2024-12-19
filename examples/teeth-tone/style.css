@@ -1,0 +1,170 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(25, 20, 38);
+  position: relative;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: Ubuntu;
+}
+
+.player,
+.comparison-slider-container {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: calc(100% - 60px - 20px - 20px);
+}
+
+.player,
+.comparison-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparison-slider,
+.before-slot,
+.after-slot {
+  width: 100%;
+  height: 100%;
+}
+
+.comparison-slider-container canvas {
+  width: 100%;
+}
+
+.player canvas {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 767px) {
+  .player canvas {
+    height: 100%;
+  }
+}
+
+.swiper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide {
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 6px;
+  color: white;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  margin-left: 12px;
+  margin-right: 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  user-select: none;
+  cursor: pointer;
+  transition: border 300ms ease-in-out;
+}
+
+.swiper-slide .active {
+  border-color: rgba(25, 20, 38, 0.4);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.input {
+  color: white;
+}
+
+.buttons {
+  position: absolute;
+  top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons--left {
+  left: 20px;
+}
+
+.buttons--right {
+  right: 20px;
+}
+
+.replay,
+.compare,
+.save,
+.close {
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: black;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+  margin-bottom: 10px;
+}
+
+.replay:hover,
+.compare:hover,
+.save:hover,
+.close:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.button {
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid white;
+  transition: border-color 300ms ease-in-out, color 300ms ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button:hover {
+  color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.6);
+}
